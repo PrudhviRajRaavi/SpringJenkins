@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'chmod +x mvnw'
-                sh './mvnw -B clean package -Dapp.message="APP_MESSAGE"'
+                sh './mvnw -B clean package -Dapp.message="$APP_MESSAGE_PSW"'
             }
         }
         stage('Test') {
